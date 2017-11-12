@@ -1,0 +1,10 @@
+
+- name: "Installing nano"
+  apt: pkg=nano state=installed
+
+- name: "Installing python-pip"
+  apt: pkg=python-pip state=installed
+
+- name: Install docker python module
+  pip:
+    name: "docker-compose==1.12.0"

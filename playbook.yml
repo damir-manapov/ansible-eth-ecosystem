@@ -1,0 +1,15 @@
+---
+- hosts: all
+  become: true
+  roles:
+  - basic
+
+- hosts: all
+  become: true
+  roles:
+    - geerlingguy.docker
+
+- hosts: netstats
+  become: true
+  roles:
+  - eth-netstats

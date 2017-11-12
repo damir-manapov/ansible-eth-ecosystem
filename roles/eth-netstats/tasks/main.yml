@@ -1,0 +1,11 @@
+
+- name: "Starting docker container netstats"
+  docker_container:
+    name: eth-netstats
+    image: manapov/eth-netstats
+    state: started
+    restart: yes
+    ports:
+     - "80:3000"
+    env:
+        WS_SECRET: secret_string
